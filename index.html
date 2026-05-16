@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en" class="w-full h-fit overflow-auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Alex Mularski - Portfolio</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./Assets/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="./spin-animation.js"></script>
+    <script defer src="./game-of-life-animation.js"></script>
+    <script defer src="./Resume-Display.js"></script>
+  </head>
+
+  <body class="bg-gray-900 text-white text-md lg:text-xl flex flex-col justify-center items-center">
+    <!-- Intro -->
+    <div class="h-[100vh] w-full flex relative text-white" id="intro-overlay">
+      <!-- Background -->
+      <div class="absolute top-0 left-0 right-0 bottom-0 z-[0]">
+        <canvas id="game-of-life" class="w-full h-full" />
+      </div>
+      <div class="signal-down z-[1]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-10 md:size-20 2xl:size-25"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+          />
+        </svg>
+      </div>
+      <div class="flex w-full h-full z-[10]">
+        <div class="w-1/2 h-full flex justify-center items-center">
+          <div class="">
+            <h1 class="text-3xl md:text-5xl xl:text-7xl m-2 font-extrabold">Nice to meet you!!!</h1>
+            <h2 class="text-2xl md:text-4xl xl:text-6xl m-2">
+              I'm <span class="text-red-400">Alex Mularski</span>
+            </h2>
+            <h3 class="text-2xl md:text-4xl xl:text-6xl m-2">Product Design Engineer</h3>
+          </div>
+        </div>
+      <div class="w-1/2 h-full flex justify-center items-center">
+          <img
+            src="./Assets/Headshot.jpg"
+            class="w-3/4 aspect-square xl:w-1/2 object-cover rounded-full border-8 border-double"
+            alt="Picture of Alex Mularski"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="w-full xl:w-[80%] 2xl:w-[70%] h-fit mt-30 px-10 flex justify-center items-center">
+      <div class="hidden md:flex w-1/3 h-full flex-col justify-center items-center gap-5">
+        <img
+          src="./Assets/WIT Logo.png"
+          alt="WIT Logo"
+          class="w-5/7 object-contain rounded-lg border border-2 border-white"
+        />
+        <!-- Frameworks -->
+        <div
+          class="flex flex-wrap w-5/7 border border-2 border-white rounded-lg p-5 gap-3 justify-center items-center bg-gray-700"
+        >
+          <h1 class="font-extrabold w-full text-center"> SOFTWARES & SKILLS</h1>
+          <img
+            src="./Assets/sw image.png"
+            alt="SW Logo"
+            class="object-contain framework-icon rounded-full bg-white"
+          />
+          <img
+            src="./Assets/cREO LOGO 6.png"
+            alt="creo Logo"
+            class="object-contain rounded-full framework-icon"
+          />
+          <img
+            src="./Assets/CATIA LOGO.png"
+            alt="CATIA Logo"
+            class="object-contain rounded-full framework-icon"
+          />
+          <img
+            src="./Assets/Nx Logo.png"
+            alt="NX Logo"
+            class="object-contain rounded-full framework-icon bg-white"
+          />
+          <img
+            src="./Assets/MC Office.png"
+            alt="Microsoft Office Logo"
+            class="object-contain rounded-full framework-icon"
+          />
+          <img
+            src="./Assets/matlab.jpeg"
+            alt="matlab Logo"
+            class="object-contain rounded-full framework-icon"
+
+          />
+        </div>
+      </div>
+      <div class="w-full md:w-2/3 h-full flex flex-col justify-center gap-5 px-5">
+        <h1 class="font-extrabold text-3xl ms-3">About Me</h1>
+        <hr />
+        <div class="flex flex-wrap gap-5 w-full justify-center items-center">
+          <a
+            class="border border-2 p-2 flex rounded-xl shadow-rose-300/50 hover:bg-rose-300 hover:text-black hover:shadow-md items-center w-fit h-10"
+            href="mailto:amularski14@gmail.com"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 me-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+              />
+            </svg>
+            amularski14@gmail.com
+          </a>
+
+          <a
+            class="border border-2 p-2 flex rounded-xl shadow-green-300/50 hover:bg-green-300 hover:text-black hover:shadow-md items-center w-fit h-10"
+            href="tel:+1508-667-7417"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 me-2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+              />
+            </svg>
+            (508) 667-7417
+          </a>
+
+          <a
+            class="border border-2 p-2 flex rounded-xl shadow-sky-300/50 hover:bg-sky-300 hover:text-black hover:shadow-md w-fit h-10"
+            href="https://www.linkedin.com/in/alexandermularski/"
+            target="_blank"
+          >
+            <img
+              src="https://logos.hunter.io/linkedin.com"
+              alt="GitHub Logo"
+              class="object-contain me-2"
+            />
+            LinkedIn
+          </a>
+        </div>
+        <section>
+          <h2 class="text-2xl font-bold">Purpose</h2>
+          <p>
+            I’m driven by a genuine interest in designing
+            <span class="text-red-400">products</span> that are both technically sound and
+            practically useful. I enjoy working across a variety of diffrent types of products and
+             breaking down vague or evolving requirements, and turning them into clear,
+            maintainable solutions. Whether
+            <span class="text-red-400">developing applications</span>, automating workflows, or
+            evaluating complex systems, I’m motivated by the challenge of understanding how software
+            should behave in <span class="text-red-400">real-world</span> environments.
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold">Education</h2>
+          <p>
+            I studied mechanical engineering at
+            <span class="text-red-400">Wentworth Institute of Technology</span>, where I developed a
+            strong foundation in mechanical engineering, and applied problem-solving.
+            In pursuit of my degree I developed a stronger work ethic which has allowed me to be flexible 
+            when balancing multiple projects. Through my collaborative efforts in my academic and professional
+            career I have gained a strong ability to communicate technical information and thrive in a 
+            team-based settings. I have a strong passion for product design and development. 
+          </p>
+        </section>
+        <section>
+          <h2 class="text-2xl font-bold">Goals</h2>
+          <p>
+            My goal is to continue growing as an engineer by working on
+            <span class="text-red-400">challenging problems across diverse products</span>. 
+            I’m particularly interested in consumer electronics, 
+            system design, and building software that adapts to
+            <span class="text-red-400">real-world</span> constraints. I aim to contribute to teams
+            where thoughtful engineering, continuous learning, and high-quality code are valued.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="w-full md:w-3/4 h-fit py-2 mt-30 flex flex-col">
+      <h1 class="text-5xl font-extrabold underline text-center w-full mb-7">Experience</h1>
+      <div class="flex-auto flex flex-col items-center my-3 gap-5">
+        <section
+          class="p-2 px-5 rounded-lg w-[80%] h-fit text-white bg-gray-800 border border-2 border-gray-500 shadow-md shadow-black hover-scale-up"
+        >
+          <div class="flex justify-between">
+            <p class="">Product Development Engineer</p>
+            <p class="text-lg">May 2024 - Currnet </p>
+          </div>
+          <p class="opacity-75 text-lg"> Revelyst </p>
+          <div class="flex flex-wrap gap-1 my-3">
+            <img
+              src="./Assets/sw image.png"
+              alt="Java Logo"
+              class="object-cover framework-icon rounded-full bg-white"
+            />
+            <img
+              src="./Assets/CATIA LOGO.png"
+              alt="Catia Logo"
+              class="object-cover rounded-full framework-icon"
+            />
+            <img
+              src="./Assets/MC Office.png"
+              alt="Microsoft Office Logo"
+              class="object-cover rounded-full framework-icon"
+            />
+            <img
+              src="./Assets/Fox logo.png"
+              alt="Fox Logo"
+              class="object-cover rounded-full framework-icon"
+            />
+            <img
+              src="./Assets/Bell Logo.png"
+              alt="Bell Logo"
+              class="object-cover rounded-full framework-icon"
+            />
+            <img
+              src="./Assets/Giro Logo.jpg"
+              alt="Giro Logo"
+              class="object-cover rounded-full framework-icon"
+            />
+            <img
+              src="./Assets/Camel Bak logo.png"
+              alt="Camelbak Logo"
+              class="object-cover rounded-full framework-icon"
+            />
+          </div>
+          <p class="">
+            At Revelyst, I lead the end-to-end development of multiple consumer products simultaneously across premium outdoor and protective equipment brands including <span class="text-red-400"> Fox Racing,
+            Bell Helmets, Giro, and CamelBak </span>. My role spans concept generation through tooling, validation testing, and production release, requiring close coordination with 
+            cross-functional internal teams and overseas manufacturing partners to ensure product quality, manufacturability, and on-time delivery. I manage design reviews, 
+            tooling development, and production readiness while developing testing roadmaps to verify compliance with industry standards including CE, CPSC, NTA, and ASTM. 
+            In addition to program execution, I design and fabricate injection-molded prototype tooling to accelerate design iterations and build technical documentation 
+            systems that improve component reuse and streamline future product development efforts.
+          </p>
+        </section>
+        <section
+          class="p-2 px-5 rounded-lg w-[80%] h-fit text-white bg-gray-800 border border-2 border-gray-500 shadow-md shadow-black hover-scale-up"
+        >
+          <div class="flex justify-between">
+            <p class=""> Product Design Engineer</p>
+            <p class="text-lg">October 2021 – May 2024</p>
+          </div>
+          <p class="opacity-50 text-lg">Shark Ninja</p>
+          <div class="flex flex-wrap gap-1 my-3">
+            <img
+              src="./Assets/sw image.png"
+              alt="sw Logo"
+              class="object-cover rounded-full framework-icon bg-white"
+            />
+            <img
+              src="./Assets/cREO LOGO 6.png"
+              alt="creo logo Logo"
+              class="object-cover framework-icon rounded-full bg-white"
+            />
+            <img
+              src="./Assets/SN logo.jpg"
+              alt="Sharkninja Logo"
+              class="object-cover rounded-full framework-icon bg-white"
+            />
+          </div>
+          <p class="">
+            At SharkNinja, I designed and delivered multiple high-volume consumer electronic products 
+            in a fast-paced product development environment, taking ownership of key mechanical design 
+            workstreams from early concept through production release. I collaborated closely with 
+            industrial design, electrical engineering, quality teams, and overseas manufacturing partners 
+            to develop innovative solutions within constraints of cost, performance, manufacturability, 
+            and user experience. My responsibilities included creating engineering documentation such as 
+            tolerance analyses, product specifications, and cost breakdowns, while driving design optimization 
+            initiatives that reduced part costs without compromising functionality or quality. I developed and 
+            executed Design of Experiments (DOEs) to validate engineering decisions, built and tested functional
+            prototypes using 3D printing and machine shop tools, and partnered with intellectual property
+            counsel to support patent preparation and filing, contributing to the protection of new product innovations.
+          </p>
+        </section>
+        
+      </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div class="w-full h-fit mt-30">
+      <h1 class="text-5xl font-extrabold underline text-center w-full mb-15">Projects</h1>
+      <!-- Card List -->
+      <div class="flex flex-wrap justify-center gap-20 items-stretch">
+        <!-- Card 1 -->
+        <div
+          class="w-[400px] overflow-hidden border border-2 border-gray-300 rounded-xl shadow-black shadow-lg flex flex-col bg-gray-800 items-center hover-scale-up"
+        >
+          <video width="640" height="360" autoplay muted loop playsinline>
+            <source src="./Assets/blast ad.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="p-2 flex flex-auto flex-col items-center">
+            <h1 class="text-lg font-extrabold underline">Ninja Blast</h1>
+            <p class="text-[18px] px-5">
+              
+            </p>
+          </div>
+          <a         
+          >
+          </a>
+        </div>
+        <div
+          class="w-[400px] overflow-hidden border border-2 border-gray-300 rounded-xl shadow-black shadow-lg flex flex-col bg-gray-800 items-center hover-scale-up"
+        >
+         
+          <video width="640" height="360" autoplay muted loop playsinline>
+            <source src="./Assets/Slushi ad.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="p-2 flex flex-auto flex-col items-center">
+            <h1 class="text-lg font-extrabold underline"> Ninja Slushi </h1>
+            <p class="text-[18px] px-5">
+            
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-[400px] overflow-hidden border border-2 border-gray-300 rounded-xl shadow-black shadow-lg flex flex-col bg-gray-800 items-center hover-scale-up"
+        >
+          <img
+            src="./Assets/Policy-Creator-Snapshot-2.png"
+            class="w-full h-[190px] object-cover border border-b-2 border-gray-700"
+          />
+          <div class="p-2 flex flex-auto flex-col items-center">
+            <h1 class="text-lg font-extrabold underline">Policy Creator</h1>
+            <p class="text-[18px] px-5">
+              A fast, collaborative policy creator designed for building insurance proposals using
+              custom, tag-based templates. It’s dynamic, easy to use, fully serializable, and works
+              completely offline, allowing staff to create and edit policies without connectivity
+              constraints. Built for speed and teamwork, it streamlines proposal creation from draft
+              to delivery.
+            </p>
+          </div>
+          <a
+            class="border border-2 p-2 my-2 flex rounded-xl shadow-gray-300/50 hover:bg-gray-300 hover:text-black hover:shadow-md w-fit h-10"
+            href="https://github.com/BotTyler/Policy_Creator"
+            target="_blank"
+          >
+            <img
+              src="https://logos.hunter.io/github.com"
+              alt="GitHub Logo"
+              class="object-contain me-2 bg-white rounded-full"
+            />
+            View on Github
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Patents-->
+         <div class="w-full h-fit mt-30">
+      <h1 class="text-5xl font-extrabold underline text-center w-full mb-15">Patents</h1>
+      <!-- Card List -->
+      <div class="flex flex-wrap justify-center gap-20 items-stretch">
+        <!-- Card 1 -->
+ <section
+          class="p-2 px-5 rounded-lg w-[80%] h-fit text-white bg-gray-800 border border-2 border-gray-500 shadow-md shadow-black hover-scale-up"
+        >
+          <div class="flex justify-between">
+            <p class=""> Product Design Engineer</p>
+          </div>
+          <p class="opacity-50 text-lg">Shark Ninja</p>
+          <div class="flex flex-wrap gap-1 my-3">
+
+          </div>
+          <p class="">
+            list patent numbers 
+          </p>
+        </section>
+        
+      </div>
+    </div>
+
+
+
+    <!-- Resume -->
+    <div class="w-full h-fit mt-30 py-2 flex flex-col items-center">
+      <h1 class="text-5xl font-extrabold underline text-center w-fit flex text-center mb-7">
+        Resume
+        <a href="Assets/Resume.pdf" class="text-sky-300 underline" download>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="lightblue"
+            class="size-8 ms-3 mt-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+            />
+          </svg>
+        </a>
+      </h1>
+      <div class="flex-auto p-3 flex justify-center items-center w-full">
+        <div id="resume-container" class="w-full md:w-[85%] xl:w-1/2 overflow-hidden"></div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="w-full h-fit mt-30 py-2">
+      <h1 class="text-5xl font-extrabold underline text-center w-full mb-2">Contact me!</h1>
+      <div class="flex flex-wrap my-[25px] gap-5 w-full justify-center items-center">
+        <a
+          class="border border-2 p-2 flex rounded-xl shadow-rose-300/50 hover:bg-rose-300 hover:text-black hover:shadow-md items-center w-fit h-10"
+          href="mailto:tyler2.jarboe@gmail.com"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 me-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+            />
+          </svg>
+          tyler2.jarboe@gmail.com
+        </a>
+
+        <a
+          class="border border-2 p-2 flex rounded-xl shadow-green-300/50 hover:bg-green-300 hover:text-black hover:shadow-md items-center w-fit h-10"
+          href="tel:+1954-801-7915"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 me-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+            />
+          </svg>
+          (954) 801-7915
+        </a>
+
+        <a
+          class="border border-2 p-2 flex rounded-xl shadow-sky-300/50 hover:bg-sky-300 hover:text-black hover:shadow-md w-fit h-10"
+          href="https://www.linkedin.com/in/tyler-jarboe-239b39215/"
+          target="_blank"
+        >
+          <img
+            src="https://logos.hunter.io/linkedin.com"
+            alt="GitHub Logo"
+            class="object-contain me-2"
+          />
+          LinkedIn
+        </a>
+
+        <a
+          class="border border-2 p-2 flex rounded-xl shadow-gray-300/50 hover:bg-gray-300 hover:text-black hover:shadow-md w-fit h-10"
+          href="https://github.com/BotTyler"
+          target="_blank"
+        >
+          <img
+            src="https://logos.hunter.io/github.com"
+            alt="GitHub Logo"
+            class="object-contain me-2 bg-white rounded-full"
+          />
+          GitHub
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
